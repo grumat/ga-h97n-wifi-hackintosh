@@ -1,6 +1,21 @@
 # GA-H97N-WIFI hackintosh
 
-OpenCore configuration for running macOS on the Gigabyte H97N-WIFI motherboard.
+OpenCore configuration for running **macOS High Sierra 10.13.6** on the Gigabyte **GA-H97N-WIFI** motherboard using iGPU.
+
+This configuration is based directly on https://github.com/vulgo/ga-h97n-wifi-hackintosh but for a iGPU system. Main difference is Platform **iMac14,2** instead of **iMac15,1**.
+
+## Tested Hardware
+
+| Field     | Value                                   |
+|:----------|----------------------------------------:|
+| CPU       | i7 4790K                                |
+| Graphics  | Intel HD Graphics 4600                  |
+| Mainboard | GA-H97N-WIFI                            |
+| Memory    | 2 x 8 GB 1600 MHz DDR3                  |
+| HDD 1     | SanDisk Extreme Pro 480 GB SSD          |
+| HDD 2     | Seagate Archive V2 6TB  5900 rpm        |
+| HDD 3     | Hitachi Travelstar 5K1000 1 TB 5400 rpm |
+
 
 ## Firmware Settings
 
@@ -81,7 +96,7 @@ Edit the ```PlatformInfo``` section of your config.plist so that the value for `
     <dict>
         ...
         <key>SystemProductName</key>
-        <string>iMac15,1</string>
+        <string>iMac14,2</string>
         ...
     </dict>
     ...
@@ -89,10 +104,10 @@ Edit the ```PlatformInfo``` section of your config.plist so that the value for `
 ...
 ````
 
-| CPU       | SystemProductName |
-|:----------|------------------:|
-| Haswell   | iMac15,1          |
-| Broadwell | iMac16,2          |
+| CPU       | SystemProductName    |
+|:----------|:--------------------:|
+| Haswell   | iMac14,2 or iMac15,1 |
+| Broadwell | iMac16,2             |
 
 Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)
 
@@ -133,7 +148,7 @@ Edit the ```PlatformInfo``` section of your config.plist so that the ```MLB```, 
 | SystemSerialNumber           | \**Serial*                |
 | SystemUUID                   | \**SmUUID*                |
 
-\* *GenSMBIOS output, iMac15,1 (Haswell) or iMac16,2 (Broadwell)*
+\* *GenSMBIOS output, iMac14,2/iMac15,1 (Haswell) or iMac16,2 (Broadwell)*
 
 Source: [https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)
 
@@ -143,7 +158,7 @@ GenSMBIOS: [https://github.com/corpnewt/GenSMBIOS](https://github.com/corpnewt/G
 
 #### USB
 
-Edit the USBPortInjector.kext ```Info.plist```. See [README-USBPortInjector.kext.md](https://github.com/vulgo/ga-h97n-wifi-hackintosh/blob/main/README-USBPortInjector.kext.md)
+Edit the USBMap.kext ```Info.plist```. See [README-USBMap.kext.md](https://github.com/grumat/ga-h97n-wifi-hackintosh/blob/main/README-USBPortInjector.kext.md)
 
 # First boot
 
