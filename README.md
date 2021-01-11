@@ -167,3 +167,27 @@ At the picker, **press space**, choose **Reset NVRAM**.
 ## Post-Install
 
 [https://dortania.github.io/OpenCore-Post-Install/](https://dortania.github.io/OpenCore-Post-Install/)
+
+# Current Working State
+
+| Subsystem                       | Status                             |
+|:--------------------------------|-----------------------------------:|
+| Audio                           | Ok                                 |
+| Bluetooth                       | Hang on Boot                       |
+| CPU                             | Detected Ok                        |
+| Gigabit Ethernet Intel I217V    | Ok, no WoL                         |
+| Gigabit Ethernet Atheros AR8161 | Ok, WoL\*                          |
+| Intel HD Graphics 4600          | Ok <br> Dual Head Ok               |
+| Memory (SysInfo)                | Ok: Size, Type Speed, Part# <br> 2 Inexisting Slots are listed |
+| SATA Ports                      | Ok                                 |
+| USB2 Ports                      | External Ok <br> Internal Disabled |
+| USB3 Ports                      | All ports Ok                       |
+| SMC CPU                         | Ok                                 |
+| SMC Fan Speed                   | only ```smc``` tool                |
+| SMC Temperatures                | Ok                                 |
+| SMC Voltages                    | only ```smc``` tool                |
+
+\* Unconfirmed
+
+
+
